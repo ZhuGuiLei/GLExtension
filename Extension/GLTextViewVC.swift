@@ -16,10 +16,13 @@ class GLTextViewVC: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.cyan
         
+        
         let textView = GLTextView.init(frame: CGRect(x: 100, y: 200, width: 200, height: 200))
         textView.backgroundColor = UIColor.white
         textView.placeholder = "请输入"
         textView.maxCount = 100
+        
+        
         
         view.addSubview(textView)
     }

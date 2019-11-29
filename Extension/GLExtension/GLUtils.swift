@@ -35,11 +35,13 @@ let GLSafeSide = CGFloat(isIphoneX ? 20 : 16)
 let GLScreenScale = (UIScreen.main.scale)
 
 
+
+
 /// 当前AppDelegate
-let GLAppDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
+let GLAppDelegate: UIApplicationDelegate? = UIApplication.shared.delegate
 
 /// 主窗口
-let GLWindow: UIWindow? = GLAppDelegate?.window
+let GLWindow: UIWindow? = UIApplication.shared.keyWindow
 
 
 /// 类型别名
@@ -51,6 +53,7 @@ typealias BaseTypeBlock<T> = ((_ sender: T) -> Void)
 //iPhoneX系列
 var isIphoneX: Bool {
     get {
+        
         if #available(iOS 11.0, *) {
             if let bottom = GLWindow?.safeAreaInsets.bottom , bottom > 0 {
                 return true

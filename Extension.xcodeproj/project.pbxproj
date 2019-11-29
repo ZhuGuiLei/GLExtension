@@ -97,6 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				18C6C1AD2390B35B000943B8 /* GLExtension */,
+				18C6C1AE2390B378000943B8 /* GLLabel.swift */,
+				18C6C1B12390B378000943B8 /* GLTextField.swift */,
+				18C6C1B22390B378000943B8 /* GLTextView.swift */,
 				18C6C1992390B139000943B8 /* AppDelegate.swift */,
 				18C6C1D22390BE2E000943B8 /* ViewController.swift */,
 				18C6C1D32390BE2E000943B8 /* ViewController.xib */,
@@ -125,9 +128,6 @@
 				18C6C1BD2390B379000943B8 /* Date_Strig+GL.swift */,
 				18C6C1B42390B378000943B8 /* String+GL.swift */,
 				18C6C1B32390B378000943B8 /* UIButton+GL.swift */,
-				18C6C1AE2390B378000943B8 /* GLLabel.swift */,
-				18C6C1B12390B378000943B8 /* GLTextField.swift */,
-				18C6C1B22390B378000943B8 /* GLTextView.swift */,
 				18C6C1B82390B378000943B8 /* Method.swift */,
 				18C6C1B52390B378000943B8 /* UIColor+GL.swift */,
 				18C6C1B02390B378000943B8 /* UIImage+GL.swift */,
