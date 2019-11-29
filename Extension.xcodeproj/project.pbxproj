@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18749922239102FA0067FAA1 /* GLExtension.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = GLExtension.podspec; sourceTree = SOURCE_ROOT; };
 		18C6C1962390B139000943B8 /* Extension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C6C1992390B139000943B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C6C19F2390B13B000943B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +96,7 @@
 		18C6C1982390B139000943B8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				18C6C1AD2390B35B000943B8 /* Extension */,
+				18C6C1AD2390B35B000943B8 /* GLExtension */,
 				18C6C1992390B139000943B8 /* AppDelegate.swift */,
 				18C6C1D22390BE2E000943B8 /* ViewController.swift */,
 				18C6C1D32390BE2E000943B8 /* ViewController.xib */,
@@ -103,6 +104,7 @@
 				18C6C19F2390B13B000943B8 /* Assets.xcassets */,
 				18C6C1A42390B13B000943B8 /* LaunchScreen.storyboard */,
 				18C6C1A72390B13B000943B8 /* Info.plist */,
+				18749922239102FA0067FAA1 /* GLExtension.podspec */,
 				18C6C1A12390B13B000943B8 /* Preview Content */,
 			);
 			path = Extension;
@@ -116,7 +118,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		18C6C1AD2390B35B000943B8 /* Extension */ = {
+		18C6C1AD2390B35B000943B8 /* GLExtension */ = {
 			isa = PBXGroup;
 			children = (
 				18C6C1CE2390B3FF000943B8 /* GLUtils.swift */,
@@ -135,7 +137,7 @@
 				18C6C1B72390B378000943B8 /* UIViewController+GL.swift */,
 				18C6C1B62390B378000943B8 /* UITableView+GL.swift */,
 			);
-			path = Extension;
+			path = GLExtension;
 			sourceTree = "<group>";
 		};
 		2AB9E21443A3EB20B4ECBF6C /* Frameworks */ = {
