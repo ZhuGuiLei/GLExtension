@@ -10,4 +10,6 @@ target 'Extension' do
   # 约束
   pod 'SnapKit'
   
+  pod 'GLExtension'
+  
 end
