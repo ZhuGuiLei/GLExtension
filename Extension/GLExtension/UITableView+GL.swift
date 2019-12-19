@@ -10,10 +10,10 @@ import UIKit
 
 extension UITableViewCell
 {
-    static func gl_dequeueReusableCell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+    static func gl_dequeueReusableCell(tableView: UITableView, indexPath: IndexPath) -> Self {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(self)", for: indexPath)
-        return cell
+        return cell as! Self
     }
 }
 

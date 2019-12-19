@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18749924239121270067FAA1 /* NSObject+GL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18749923239121270067FAA1 /* NSObject+GL.swift */; };
+		18A611F423A3214200D35201 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A611F323A3214200D35201 /* iAd.framework */; };
+		18A611F623A321AF00D35201 /* GLTopADVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A611F523A321AF00D35201 /* GLTopADVC.swift */; };
+		18C5DF2723A8849100161B2A /* ACLabelCounting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5DF2623A8849100161B2A /* ACLabelCounting.swift */; };
 		18C6C19A2390B139000943B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6C1992390B139000943B8 /* AppDelegate.swift */; };
 		18C6C1A02390B13B000943B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C6C19F2390B13B000943B8 /* Assets.xcassets */; };
 		18C6C1A32390B13B000943B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C6C1A22390B13B000943B8 /* Preview Assets.xcassets */; };
@@ -29,11 +33,17 @@
 		18C6C1D42390BE2E000943B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6C1D22390BE2E000943B8 /* ViewController.swift */; };
 		18C6C1D52390BE2E000943B8 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C6C1D32390BE2E000943B8 /* ViewController.xib */; };
 		18C6C1D72390C339000943B8 /* GLTextViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6C1D62390C339000943B8 /* GLTextViewVC.swift */; };
+		18C8FE99239F323F00AAF850 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE98239F323F00AAF850 /* StringExtensions.swift */; };
 		CB863A4CB2C0E82B6ECF7B9B /* Pods_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A83235A36291B0A9EDB251 /* Pods_Extension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18749922239102FA0067FAA1 /* GLExtension.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = GLExtension.podspec; sourceTree = SOURCE_ROOT; };
+		18749922239102FA0067FAA1 /* GLExtension.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = GLExtension.podspec; sourceTree = SOURCE_ROOT; };
+		18749923239121270067FAA1 /* NSObject+GL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+GL.swift"; sourceTree = "<group>"; };
+		18A611F323A3214200D35201 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		18A611F523A321AF00D35201 /* GLTopADVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTopADVC.swift; sourceTree = "<group>"; };
+		18A611F723A328DE00D35201 /* GLAdmobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLAdmobVC.swift; sourceTree = "<group>"; };
+		18C5DF2623A8849100161B2A /* ACLabelCounting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLabelCounting.swift; sourceTree = "<group>"; };
 		18C6C1962390B139000943B8 /* Extension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C6C1992390B139000943B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C6C19F2390B13B000943B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +68,7 @@
 		18C6C1D22390BE2E000943B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18C6C1D32390BE2E000943B8 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		18C6C1D62390C339000943B8 /* GLTextViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextViewVC.swift; sourceTree = "<group>"; };
+		18C8FE98239F323F00AAF850 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		8251BA5B0ADC09546F3346FF /* Pods-Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Extension.release.xcconfig"; path = "Target Support Files/Pods-Extension/Pods-Extension.release.xcconfig"; sourceTree = "<group>"; };
 		A4A83235A36291B0A9EDB251 /* Pods_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EF47344238FC0F66E68E7D /* Pods-Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Extension.debug.xcconfig"; path = "Target Support Files/Pods-Extension/Pods-Extension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A611F423A3214200D35201 /* iAd.framework in Frameworks */,
 				CB863A4CB2C0E82B6ECF7B9B /* Pods_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,10 +112,13 @@
 				18C6C1AE2390B378000943B8 /* GLLabel.swift */,
 				18C6C1B12390B378000943B8 /* GLTextField.swift */,
 				18C6C1B22390B378000943B8 /* GLTextView.swift */,
+				18C5DF2623A8849100161B2A /* ACLabelCounting.swift */,
 				18C6C1992390B139000943B8 /* AppDelegate.swift */,
 				18C6C1D22390BE2E000943B8 /* ViewController.swift */,
 				18C6C1D32390BE2E000943B8 /* ViewController.xib */,
 				18C6C1D62390C339000943B8 /* GLTextViewVC.swift */,
+				18A611F523A321AF00D35201 /* GLTopADVC.swift */,
+				18A611F723A328DE00D35201 /* GLAdmobVC.swift */,
 				18C6C19F2390B13B000943B8 /* Assets.xcassets */,
 				18C6C1A42390B13B000943B8 /* LaunchScreen.storyboard */,
 				18C6C1A72390B13B000943B8 /* Info.plist */,
@@ -127,12 +142,14 @@
 				18C6C1CE2390B3FF000943B8 /* GLUtils.swift */,
 				18C6C1BD2390B379000943B8 /* Date_Strig+GL.swift */,
 				18C6C1B42390B378000943B8 /* String+GL.swift */,
+				18C8FE98239F323F00AAF850 /* StringExtensions.swift */,
 				18C6C1B32390B378000943B8 /* UIButton+GL.swift */,
-				18C6C1B82390B378000943B8 /* Method.swift */,
+				18749923239121270067FAA1 /* NSObject+GL.swift */,
 				18C6C1B52390B378000943B8 /* UIColor+GL.swift */,
 				18C6C1B02390B378000943B8 /* UIImage+GL.swift */,
 				18C6C1AF2390B378000943B8 /* UIView+GLFrame.swift */,
 				18C6C1BA2390B379000943B8 /* UIView+GL.swift */,
+				18C6C1B82390B378000943B8 /* Method.swift */,
 				18C6C1BB2390B379000943B8 /* UIViewController+Method.swift */,
 				18C6C1B72390B378000943B8 /* UIViewController+GL.swift */,
 				18C6C1B62390B378000943B8 /* UITableView+GL.swift */,
@@ -143,6 +160,7 @@
 		2AB9E21443A3EB20B4ECBF6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18A611F323A3214200D35201 /* iAd.framework */,
 				A4A83235A36291B0A9EDB251 /* Pods_Extension.framework */,
 			);
 			name = Frameworks;
@@ -275,8 +293,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C6C1C62390B379000943B8 /* UITableView+GL.swift in Sources */,
+				18C5DF2723A8849100161B2A /* ACLabelCounting.swift in Sources */,
 				18C6C19A2390B139000943B8 /* AppDelegate.swift in Sources */,
+				18A611F623A321AF00D35201 /* GLTopADVC.swift in Sources */,
 				18C6C1BE2390B379000943B8 /* GLLabel.swift in Sources */,
+				18C8FE99239F323F00AAF850 /* StringExtensions.swift in Sources */,
 				18C6C1C22390B379000943B8 /* GLTextView.swift in Sources */,
 				18C6C1CD2390B379000943B8 /* Date_Strig+GL.swift in Sources */,
 				18C6C1C02390B379000943B8 /* UIImage+GL.swift in Sources */,
@@ -284,6 +305,7 @@
 				18C6C1CB2390B379000943B8 /* UIViewController+Method.swift in Sources */,
 				18C6C1C52390B379000943B8 /* UIColor+GL.swift in Sources */,
 				18C6C1D72390C339000943B8 /* GLTextViewVC.swift in Sources */,
+				18749924239121270067FAA1 /* NSObject+GL.swift in Sources */,
 				18C6C1C12390B379000943B8 /* GLTextField.swift in Sources */,
 				18C6C1CA2390B379000943B8 /* UIView+GL.swift in Sources */,
 				18C6C1C82390B379000943B8 /* Method.swift in Sources */,

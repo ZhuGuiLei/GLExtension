@@ -7,13 +7,31 @@
 //
 
 import UIKit
+//import ACLabelCounting
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lab: ACLabelCounting!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        self.navigationItem.prompt = " "
+        self.navigationItem.title = "title"
+        view.backgroundColor = .randomColor()
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "首页", style: .plain, target: nil, action: nil)
+        let lab = ACLabelCounting.init()
+        view.addSubview(lab)
+        lab.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
+        self.lab = lab
+        
+        
     }
     
     @IBAction func date(_ sender: UIButton) {
@@ -28,6 +46,20 @@ class ViewController: UIViewController {
     }
     
 
+    @IBAction func iadAction(_ sender: UIButton) {
+        let vc = GLTopADVC.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func admobAction(_ sender: UIButton) {
+        lab.count(from: 0, to: 999, duration: 3, animationType: .EaseInOut, dataType: .Int) { (tit) -> String in
+            
+            return (tit == "999") ? (tit + "+") : tit
+        }
+
+        lab.start()
+//        let vc = GLAdmobVC.init()
+//        self.navigationController?.pushViewController(vc, animated: true)
+    }
     /*
     // MARK: - Navigation
 

@@ -46,7 +46,7 @@ let GLWindow: UIWindow? = UIApplication.shared.keyWindow
 
 /// 类型别名
 typealias BaseBlock = (() -> Void)
-typealias BaseTypeBlock<T> = ((_ sender: T) -> Void)
+typealias BaseTypeBlock<T: NSObject> = ((T) -> Void)
 
 
 
@@ -137,6 +137,40 @@ func Call(phone: String?) {
     let phone = "telprompt://" + phone!
     if UIApplication.shared.canOpenURL(URL(string: phone)!) {
         UIApplication.shared.openURL(URL(string: phone)!)
+    }
+    
+}
+
+/// 当前版本是否首次启动
+func isFirstLaunch() -> Bool
+{
+    guard let info = Bundle.main.infoDictionary else {
+        return false
+    }
+    guard let current = info["CFBundleShortVersionString"] as? String else {
+        return false
+    }
+    guard let old = UserDefaults.standard.object(forKey: "AppVersion") as? String else {
+        UserDefaults.standard.set(current, forKey: "AppVersion")
+        return true
+    }
+    let cArr = current.components(separatedBy: ".")
+    var cv = 0
+    for str in cArr {
+        cv = cv * 100 + (Int(str) ?? 0)
+    }
+    
+    let oArr = old.components(separatedBy: ".")
+    var ov = 0
+    for str in oArr {
+        ov = ov * 100 + (Int(str) ?? 0)
+    }
+    
+    if cv > ov {
+        UserDefaults.standard.set(current, forKey: "AppVersion")
+        return true
+    } else {
+        return false
     }
     
 }

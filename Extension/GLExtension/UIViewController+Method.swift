@@ -20,19 +20,19 @@ extension UIViewController: MethodProtocol {
         once = false
         var original = #selector(UIViewController.present(_:animated:completion:))
         var swizzled = #selector(UIViewController.evpresent(_:animated:completion:))
-        self.swizzlingForClass(self, originalSelector: original, swizzledSelector: swizzled)
+        self.exchangeInstanceMethod(self, originalSelector: original, swizzledSelector: swizzled)
         
         original = #selector(UIViewController.viewDidAppear(_:))
         swizzled = #selector(UIViewController.evviewDidAppear(_:))
-        self.swizzlingForClass(self, originalSelector: original, swizzledSelector: swizzled)
+        self.exchangeInstanceMethod(self, originalSelector: original, swizzledSelector: swizzled)
         
         original = #selector(UIViewController.viewWillDisappear(_:))
         swizzled = #selector(UIViewController.evviewWillDisappear(_:))
-        self.swizzlingForClass(self, originalSelector: original, swizzledSelector: swizzled)
+        self.exchangeInstanceMethod(self, originalSelector: original, swizzledSelector: swizzled)
         
         original = #selector(UIViewController.viewDidDisappear(_:))
         swizzled = #selector(UIViewController.evviewDidDisappear(_:))
-        self.swizzlingForClass(self, originalSelector: original, swizzledSelector: swizzled)
+        self.exchangeInstanceMethod(self, originalSelector: original, swizzledSelector: swizzled)
         
     }
 

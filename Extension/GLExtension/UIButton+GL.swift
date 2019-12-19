@@ -66,3 +66,76 @@ extension UIButton {
         self.imageEdgeInsets = imageEdgeInsets
     }
 }
+
+
+extension UIButton: MethodProtocol {
+  
+    fileprivate struct AssociatedKeys {
+        static var eventInterval: TimeInterval = 0.5
+        static var eventUnavailable: Bool = false
+    }
+    /// 响应间隔
+    var eventInterval: TimeInterval {
+        get {
+            if let value = objc_getAssociatedObject(self, &AssociatedKeys.eventInterval) as? TimeInterval {
+                return value
+            } else {
+                return 0.5
+            }
+        }
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.eventInterval, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    /// 事件不可用
+    var eventUnavailable: Bool {
+        get {
+            if let value = objc_getAssociatedObject(self, &AssociatedKeys.eventUnavailable) as? Bool {
+                return value
+            } else {
+                return false
+            }
+        }
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.eventUnavailable, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    private static var once = true
+    static func initializeMethod() {
+        if once == false {
+            return
+        }
+        once = false
+//        let original = #selector(UIButton.sendAction(_:to:for:))
+//        let swizzled = #selector(UIButton.glsendAction(_:to:for:))
+//        self.swizzlingForClass(self, originalSelector: original, swizzledSelector: swizzled)
+        
+        
+    }
+    
+    open override func sendAction(_ action: Selector, to target: Any?, for event: UIEvent?) {
+        DLog("sendAction")
+        if self.isKind(of: UIButton.self) && event?.allTouches?.first?.phase == UITouch.Phase.ended {
+            if eventUnavailable == false {
+                eventUnavailable = true
+                perform(#selector(setEventUnavailable), with: nil, afterDelay: eventInterval)
+                super.sendAction(action, to: target, for: event)
+            }
+        } else {
+            super.sendAction(action, to: target, for: event)
+        }
+    }
+    
+    @objc open func glsendAction(_ action: Selector, to target: Any?, for event: UIEvent?) {
+        
+    }
+    
+    @objc private func setEventUnavailable() {
+        eventUnavailable = false
+    }
+    
+    
+}
+
