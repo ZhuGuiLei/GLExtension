@@ -8,19 +8,20 @@
 
 import UIKit
 
-/**
- UIButton图像文字同时存在时---图像相对于文字的位置
- 
- - top:    图像在上
- - left:   图像在左
- - right:  图像在右
- - bottom: 图像在下
- */
-enum ButtonImageEdgeInsetsStyle {
-    case top, left, right, bottom
-}
 
 public extension UIButton {
+    /**
+     UIButton图像文字同时存在时---图像相对于文字的位置
+     
+     - top:    图像在上
+     - left:   图像在左
+     - right:  图像在右
+     - bottom: 图像在下
+     */
+    enum ButtonImageEdgeInsetsStyle {
+        case top, left, right, bottom
+    }
+    
     
     func imagePosition(at style: ButtonImageEdgeInsetsStyle, space: CGFloat) {
         //得到imageView和titleLabel的宽高
@@ -68,7 +69,7 @@ public extension UIButton {
 }
 
 
-public extension UIButton: MethodProtocol {
+extension UIButton: MethodProtocol {
   
     fileprivate struct AssociatedKeys {
         static var eventInterval: TimeInterval = 0.5

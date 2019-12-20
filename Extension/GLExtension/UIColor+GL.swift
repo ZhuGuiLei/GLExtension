@@ -62,7 +62,7 @@ public extension UIColor {
 ///
 /// - level: 水平
 /// - vertical: 竖直
-enum GradientChangeDirection {
+public enum GradientChangeDirection {
     /// 水平
     case level
     /// 竖直

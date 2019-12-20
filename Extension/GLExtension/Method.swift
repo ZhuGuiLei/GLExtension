@@ -37,7 +37,7 @@ public extension UIApplication {
 
     private static var once = true
 
-    override open var next: UIResponder? {
+    override var next: UIResponder? {
         if UIApplication.once {
             UIApplication.once = false
             UIApplication.runOnce
