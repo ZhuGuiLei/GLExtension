@@ -1,9 +1,9 @@
 //
 //  UIButton+Extension.swift
-//  EagleVision
+//  Extension
 //
-//  Created by apple on 2019/9/11.
-//  Copyright © 2019 JAVIS. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import UIKit
@@ -20,7 +20,7 @@ enum ButtonImageEdgeInsetsStyle {
     case top, left, right, bottom
 }
 
-extension UIButton {
+public extension UIButton {
     
     func imagePosition(at style: ButtonImageEdgeInsetsStyle, space: CGFloat) {
         //得到imageView和titleLabel的宽高
@@ -68,7 +68,7 @@ extension UIButton {
 }
 
 
-extension UIButton: MethodProtocol {
+public extension UIButton: MethodProtocol {
   
     fileprivate struct AssociatedKeys {
         static var eventInterval: TimeInterval = 0.5

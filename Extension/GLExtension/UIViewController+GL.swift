@@ -1,15 +1,15 @@
 //
 //  UIViewController+GL.swift
-//  SwiftTest
+//  Extension
 //
-//  Created by apple on 2019/9/5.
-//  Copyright © 2019 apple. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
     /// 顶部控制器
     static func topVC() -> UIViewController {

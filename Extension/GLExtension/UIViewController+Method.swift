@@ -1,9 +1,9 @@
 //
 //  UIViewController+ev.swift
-//  SwiftTest
+//  Extension
 //
-//  Created by apple on 2019/9/5.
-//  Copyright © 2019 apple. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import Foundation
@@ -78,7 +78,7 @@ extension UIViewController: MethodProtocol {
 }
 
 
-extension UIViewController
+public extension UIViewController
 {
     fileprivate struct AssociatedKeys {
         static var statusBarHidden: Bool = false

@@ -1,15 +1,15 @@
 //
 //  UIImage+MDExtension.swift
-//  MDCredit
+//  Extension
 //
-//  Created by Alan on 2017/11/10.
-//  Copyright © 2017年 MD. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     
     /// 颜色创建Image
     static func image(color: UIColor) -> UIImage

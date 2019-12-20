@@ -1,14 +1,14 @@
 //
 //  UIView-Extension.swift
-//  Test
+//  Extension
 //
-//  Created by Stev Stark on 2019/7/7.
-//  Copyright © 2019 Stev Stark. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     var x : CGFloat {
         set {
@@ -157,7 +157,7 @@ extension UIView {
 }
 
 
-extension CALayer {
+public extension CALayer {
     /// 设置边线颜色
     var borderUIColor: UIColor {
         get {

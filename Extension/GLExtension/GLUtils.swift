@@ -1,23 +1,24 @@
 //
 //  EVUtils.swift
-//  EagleVision
+//  Extension
 //
-//  Created by apple on 2019/9/18.
-//  Copyright © 2019 JAVIS. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import UIKit
 import AdSupport
 
-
-let Hi: CGFloat = UIScreen.main.bounds.size.height
-let Wi: CGFloat = UIScreen.main.bounds.size.width
-
-let Hs: CGFloat = UIApplication.shared.statusBarFrame.size.height
-
-let Hn: CGFloat = (Hs + 44)
-
-var Hb: CGFloat {
+/// 屏幕高
+public let Hi: CGFloat = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
+/// 屏幕宽
+public let Wi: CGFloat = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
+/// 状态栏高
+public let Hs: CGFloat = UIApplication.shared.statusBarFrame.size.height
+/// 导航栏高
+public let Hn: CGFloat = (Hs + 44)
+/// 下巴高
+public var Hb: CGFloat {
     get {
         if #available(iOS 11.0, *) {
             return GLWindow?.safeAreaInsets.bottom ?? 0
@@ -26,32 +27,32 @@ var Hb: CGFloat {
         }
     }
 }
+/// tabbar高
+public let Htb: CGFloat = (Hb + 49)
 
-let Htb: CGFloat = (Hb + 49)
-
-
-let GLSafeSide = CGFloat(isIphoneX ? 20 : 16)
-
-let GLScreenScale = (UIScreen.main.scale)
+/// 左右安全距离
+public let GLSafeSide = CGFloat(isIphoneX ? 20 : 16)
+/// 分辨率
+public let GLScreenScale = (UIScreen.main.scale)
 
 
 
 
 /// 当前AppDelegate
-let GLAppDelegate: UIApplicationDelegate? = UIApplication.shared.delegate
+public let GLAppDelegate: UIApplicationDelegate? = UIApplication.shared.delegate
 
 /// 主窗口
-let GLWindow: UIWindow? = UIApplication.shared.keyWindow
+public let GLWindow: UIWindow? = UIApplication.shared.keyWindow
 
 
 /// 类型别名
-typealias BaseBlock = (() -> Void)
-typealias BaseTypeBlock<T: NSObject> = ((T) -> Void)
+public typealias BaseBlock = (() -> Void)
+public typealias BaseTypeBlock<T: NSObject> = ((T) -> Void)
 
 
 
 //iPhoneX系列
-var isIphoneX: Bool {
+public var isIphoneX: Bool {
     get {
         
         if #available(iOS 11.0, *) {
@@ -66,12 +67,12 @@ var isIphoneX: Bool {
 }
 
 /// 隐藏键盘
-func KeyboardHide() {
+public func KeyboardHide() {
     UIApplication.shared.keyWindow?.endEditing(true)
 }
 
 
-struct AppInfo {
+public struct AppInfo {
     
     static let infoDictionary = Bundle.main.infoDictionary
     
@@ -124,7 +125,7 @@ struct AppInfo {
 /// 打电话
 ///
 /// - Parameter phone: 电话号码
-func Call(phone: String?) {
+public func Call(phone: String?) {
     if phone == nil  {
         DLog("号码为空")
         return
@@ -142,7 +143,7 @@ func Call(phone: String?) {
 }
 
 /// 当前版本是否首次启动
-func isFirstLaunch() -> Bool
+public func isFirstLaunch() -> Bool
 {
     guard let info = Bundle.main.infoDictionary else {
         return false
@@ -178,13 +179,13 @@ func isFirstLaunch() -> Bool
 
 #if DEBUG
 
-func DLog(_ items: Any..., separator: String = " ", terminator: String = "\n") {
+public func DLog(_ items: Any..., separator: String = " ", terminator: String = "\n") {
     print(items, separator: separator, terminator: terminator)
 }
 
 #else
 
-func DLog(_ items: Any..., separator: String = " ", terminator: String = "\n") {}
+public func DLog(_ items: Any..., separator: String = " ", terminator: String = "\n") {}
 
 #endif
 

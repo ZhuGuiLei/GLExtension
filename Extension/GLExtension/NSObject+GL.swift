@@ -2,13 +2,13 @@
 //  NSObject+GL.swift
 //  Extension
 //
-//  Created by apple on 2019/11/29.
+//  Created by apple on 2019/12/13.
 //  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import UIKit
 
-extension NSObject
+public extension NSObject
 {
     /// 拦截实例方法
     static func exchangeInstanceMethod(_ forClass: AnyClass, originalSelector: Selector, swizzledSelector: Selector) {

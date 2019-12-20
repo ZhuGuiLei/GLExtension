@@ -1,9 +1,9 @@
 //
 //  Method.swift
-//  GLTabNav
+//  Extension
 //
-//  Created by apple on 2019/11/22.
-//  Copyright © 2019 apple. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ protocol MethodProtocol: NSObjectProtocol {
 }
 
 
-class Method {
+public class Method {
     // 获取到所有的类，遍历类，遵守协议MethodProtocol的类执行initializeMethod方法
     static func performOnce() {
         let count = Int(objc_getClassList(nil, 0))
@@ -28,7 +28,7 @@ class Method {
 }
 
 
-extension UIApplication {
+public extension UIApplication {
     private static let runOnce: Void = {
 //        Method.performOnce()
         UIViewController.initializeMethod()

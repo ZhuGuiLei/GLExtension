@@ -1,15 +1,15 @@
 //
 //  String+GL.swift
-//  EagleVision
+//  Extension
 //
-//  Created by apple on 2019/10/30.
-//  Copyright © 2019 JAVIS. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-extension String
+public extension String
 {
     /// 长度
     var length: Int {
@@ -36,7 +36,7 @@ extension String
     }
 }
 
-extension String
+public extension String
 {
     /// 保留指定小数位，保留数字后的文字
     ///
@@ -72,7 +72,7 @@ extension String
     }
 }
 
-extension String
+public extension String
 {
     func intValue() -> Int {
         let d = Double(self) ?? 0.0
@@ -96,7 +96,7 @@ extension String
     
 }
 
-extension String
+public extension String
 {
     /// 将字符串中数字转换成上标数字 ⁰¹²³⁴⁵⁶⁷⁸⁹
     func toNumSuperscript() -> String {
@@ -208,7 +208,7 @@ extension String
 }
 
 
-extension String
+public extension String
 {
     
     /** 检查是否为空 true:不是空; false:空 */

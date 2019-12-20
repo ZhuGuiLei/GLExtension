@@ -1,10 +1,11 @@
 //
 //  SwiftString.swift
-//  SwiftString
+//  Extension
 //
-//  Created by Andrew Mayne on 30/01/2016.
-//  Copyright © 2016 Red Brick Labs. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
+
 import UIKit
 
 public extension String {

@@ -1,9 +1,9 @@
 //
 //  Date+Tool.swift
-//  EagleVision
+//  Extension
 //
-//  Created by apple on 2019/11/7.
-//  Copyright © 2019 JAVIS. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ fileprivate let D_DAY        = 86400.0
 fileprivate let D_WEEK       = 604800.0
 fileprivate let D_YEAR       = 31536000.0
 
-extension Date
+public extension Date
 {
     
     static func date(string: String, dateFormat: String = "yyyy-MM-dd HH:mm:ss") -> Date {

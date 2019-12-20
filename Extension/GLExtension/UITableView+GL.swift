@@ -1,14 +1,14 @@
 //
 //  glExtension.swift
-//  Eaglglision
+//  Extension
 //
-//  Created by JAVIS on 2019/9/4.
-//  Copyright © 2019 JAVIS. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import UIKit
 
-extension UITableViewCell
+public extension UITableViewCell
 {
     static func gl_dequeueReusableCell(tableView: UITableView, indexPath: IndexPath) -> Self {
         
@@ -17,7 +17,7 @@ extension UITableViewCell
     }
 }
 
-extension UICollectionViewCell {
+public extension UICollectionViewCell {
     static func gl_dequeueReusableCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(self)", for: indexPath)
@@ -25,7 +25,7 @@ extension UICollectionViewCell {
     }
 }
 
-extension UICollectionView {
+public extension UICollectionView {
     
     func gl_registerCell(cell: UICollectionViewCell.Type) {
         self.register(UINib.init(nibName: "\(cell)", bundle: nil), forCellWithReuseIdentifier: "\(cell)")
@@ -36,7 +36,7 @@ extension UICollectionView {
     }
 }
 
-extension UITableView {
+public extension UITableView {
     
     func gl_registerCell(cell: UITableViewCell.Type) {
         self.register(UINib.init(nibName: "\(cell)", bundle: nil), forCellReuseIdentifier: "\(cell)")

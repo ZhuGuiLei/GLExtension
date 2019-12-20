@@ -1,14 +1,14 @@
 //
 //  UIView+Tool.swift
-//  EagleVision
+//  Extension
 //
-//  Created by apple on 2019/11/5.
-//  Copyright © 2019 JAVIS. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import UIKit
 
-extension UIView
+public extension UIView
 {
     /// 所在的控制器
     func viewController() -> UIViewController? {
@@ -58,7 +58,7 @@ extension UIView
     }
 }
 
-extension UIView
+public extension UIView
 {
     /// 移除所有子视图
     func removeAllSubviews() {

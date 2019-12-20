@@ -1,16 +1,16 @@
 //
 //  UIColor+GL.swift
-//  SwiftTest
+//  Extension
 //
-//  Created by apple on 2019/9/5.
-//  Copyright © 2019 apple. All rights reserved.
+//  Created by apple on 2019/12/13.
+//  Copyright © 2019 zhuguilei. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
 
-extension UIColor {
+public extension UIColor {
     
     /// 颜色黑-白
     ///
@@ -71,7 +71,7 @@ enum GradientChangeDirection {
     case upwardDiagonalLine
 }
 
-extension UIColor
+public extension UIColor
 {
     
     /// 梯度色
